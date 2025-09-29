@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 25, 2025 at 01:56 PM
+-- Generation Time: Sep 29, 2025 at 12:12 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -31,7 +31,7 @@ CREATE TABLE `console` (
   `Console_ID` int(11) NOT NULL,
   `Manufacturer` text NOT NULL,
   `C_name` text NOT NULL,
-  `Release date` text NOT NULL,
+  `Release_date` text NOT NULL,
   `Controller_no` int(11) NOT NULL,
   `Bit` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -40,13 +40,14 @@ CREATE TABLE `console` (
 -- Dumping data for table `console`
 --
 
-INSERT INTO `console` (`Console_ID`, `Manufacturer`, `C_name`, `Release date`, `Controller_no`, `Bit`) VALUES
+INSERT INTO `console` (`Console_ID`, `Manufacturer`, `C_name`, `Release_date`, `Controller_no`, `Bit`) VALUES
 (1, 'nintendo', 'nintendo switch', '3/03/17', 4, 64),
 (2, 'Sony', 'Ps5', '15/5/2023', 3, 64),
 (3, 'nitendio', 'Switch 2', '15/05/2025', 4, 64),
 (4, 'MircoSoft', 'Xbox X', '25/10/2023', 2, 32),
 (5, 'Nitendo', '3DS', '01/06/2012', 1, 32),
-(6, 'sega', 'Saturn', '02/11/1995', 2, 32);
+(6, 'sega', 'Saturn', '02/11/1995', 2, 32),
+(8, 'Nokia', 'N-Gage', '50/03/2003', 1, 32);
 
 -- --------------------------------------------------------
 
@@ -87,7 +88,9 @@ INSERT INTO `user` (`User_id`, `Username`, `password`, `Signupdate`, `Dateofbirt
 (3, 'OrionCode42', 'fZ#8Lp$2xQ', '2024-03-09', '1995-02-14', 'Russia'),
 (4, 'NovaByte77', 'Wd!3Mkr^7N', '2025-01-30', '2000-12-01', 'Germany'),
 (5, 'EchoStorm19', 'Tn$6Xzv!5R', '2025-07-12', '1992-09-09', 'France'),
-(6, 'ZenithFox21', 'Gy#2Hvq&8J', '2025-09-01', '2001-03-27', 'Ukrian');
+(6, 'ZenithFox21', 'Gy#2Hvq&8J', '2025-09-01', '2001-03-27', 'Ukrian'),
+(7, 'Lumonoxs', '$2y$10$VSliC7.ClDkFeEHyk4BXd.QbzClL4VvYIl0hMjugeylfE7ru8BPUO', '15/07/2012', '25/10/2006', 'Japan'),
+(8, 'hkfssdf', '$2y$10$00YIV7UDVERnM9JsdXTTMeNUCdsfuz/ocAbDuGw1GSurVNfiupgf2', 'jdflksdnflk', 'sdjfk;klsdj', 'paosd\'');
 
 --
 -- Indexes for dumped tables
@@ -121,7 +124,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `console`
 --
 ALTER TABLE `console`
-  MODIFY `Console_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `Console_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `owns`
@@ -133,7 +136,7 @@ ALTER TABLE `owns`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `User_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `User_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables
